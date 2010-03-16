@@ -1,6 +1,6 @@
 ;;Time-stamp: <>
 
-;;¸ñÊ½»¯Õû¸öÎÄ¼ş
+;;æ ¼å¼åŒ–æ•´ä¸ªæ–‡ä»¶
 (global-set-key [(control i)] 'indent-whole-buffer)
 (defun indent-whole-buffer ()
   "indent whole buffer"
@@ -9,7 +9,7 @@
   (indent-region (point-min) (point-max) nil))
 
 
-;;ÆôÓÃÖĞÎÄ
+;;å¯ç”¨ä¸­æ–‡
 (set-language-environment 'Chinese-GB)
 (set-keyboard-coding-system 'euc-cn)
 (set-clipboard-coding-system 'euc-cn)
@@ -21,16 +21,16 @@
       '(euc-cn . euc-cn))
 
 
-;;ÅäÉ«·½°¸Éè¶¨
+;;é…è‰²æ–¹æ¡ˆè®¾å®š
 (require 'color-theme)
 (color-theme-initialize) ;;for windwos
 (color-theme-dark-blue2)
 
-;;ÉèÖÃ×ÖÌå
+;;è®¾ç½®å­—ä½“
 (set-default-font "-outline-Bitstream Vera Sans Mono-bold-r-normal-normal-13-97-96-96-c-*-iso8859-1")
 
 
-;;»»ĞĞ×Ô¶¯Ëõ½ø
+;;æ¢è¡Œè‡ªåŠ¨ç¼©è¿›
 (mapcar
   (lambda (mode)
     (let ((mode-hook (intern (concat (symbol-name mode) "-hook")))
@@ -45,7 +45,7 @@
 
 
 
-;;»»ĞĞ¶ÔÆë--¶ÔÓ¦ÓÚvimÖĞµÄ Control-o
+;;æ¢è¡Œå¯¹é½--å¯¹åº”äºvimä¸­çš„ Control-o
 (global-set-key [(control o)] 'vi-open-next-line)
 (defun vi-open-next-line (arg)
   "Move to the next line (like vi) and then opens a line."
@@ -56,7 +56,7 @@
   (indent-according-to-mode))
 
 
-;;À¨ºÅ×Ô¶¯Íê³É
+;;æ‹¬å·è‡ªåŠ¨å®Œæˆ
 (setq skeleton-pair t)
 (global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
 (global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
@@ -65,7 +65,7 @@
 
 
 
-;;×Ô¶¯Íê³É
+;;è‡ªåŠ¨å®Œæˆ
 (global-set-key [(control space)] 'hippie-expand)
 (global-set-key [(control return)] 'set-mark-command)
 (require 'hippie-exp)
@@ -80,7 +80,7 @@
          try-expand-whole-kill))
 
 
-;;ÕûĞĞÒÆ¶¯
+;;æ•´è¡Œç§»åŠ¨
 (global-set-key [(meta up)] 'move-line-up)
 (global-set-key [(meta down)] 'move-line-down)
 (defun move-line (&optional n)
@@ -105,7 +105,7 @@
 
 
 
-;;×Ô¶¨ÒåµÄ°´¼ü°ó¶¨
+;;è‡ªå®šä¹‰çš„æŒ‰é”®ç»‘å®š
 (global-set-key [(meta n)]
                 (lambda (&optional n) (interactive "p")
                   (scroll-up (or n 1))))
@@ -128,11 +128,11 @@
   )
 
 
-;;¶ÔjavascriptÎÄ¼şÆôÓÃjavascript-mode
+;;å¯¹javascriptæ–‡ä»¶å¯ç”¨javascript-mode
 (autoload 'javascript-mode "javascript" nil t)
 (setq auto-mode-alist (cons '("\\.js\\'" . javascript-mode) auto-mode-alist))
 
-;;sql-mode ÏÂÆôÓÃtsql-indent
+;;sql-mode ä¸‹å¯ç”¨tsql-indent
 (eval-after-load "sql"
                  '(load-library "sql-indent"))
 
@@ -206,14 +206,14 @@
                      (line-beginning-position 2)))))
 
 
-;;¼ÇÂ¼ĞŞ¸ÄÊ±¼ä
+;;è®°å½•ä¿®æ”¹æ—¶é—´
 (add-hook 'write-file-hooks 'time-stamp)
-(setq time-stamp-start "×îºó¸üĞÂÊ±¼ä:[    ]+\\\\?")
+(setq time-stamp-start "æœ€åæ›´æ–°æ—¶é—´:[    ]+\\\\?")
 (setq time-stamp-end "\n")
-(setq time-stamp-format "%:yÄê%:mÔÂ%:dÈÕ")
+(setq time-stamp-format "%:yå¹´%:mæœˆ%:dæ—¥")
 
 
-;;¸öĞÔ»¯ÉèÖÃ
+;;ä¸ªæ€§åŒ–è®¾ç½®
 (display-time)
 (transient-mark-mode t)
 (column-number-mode t)
@@ -222,12 +222,12 @@
 
 
 
-;;¶¨Òåµ¥´ÊËõĞ´ÎªÓÀ¾ÃĞÔ
+;;å®šä¹‰å•è¯ç¼©å†™ä¸ºæ°¸ä¹…æ€§
 (setq-default abbrev-mode t)
 ;;(setq-abbrev-file "~/.abbrev_defs")
 (setq save-abbrevs t)
 
-;;Ê¹ÓÃpython-mode.el
+;;ä½¿ç”¨python-mode.el
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
@@ -236,7 +236,7 @@
 (defun run-current-file ()
   "Execute or compile the current file.
   For example, if the current buffer is the file x.pl,
-  then it'll call ¡°perl x.pl¡± in a shell.
+  then it'll call â€œperl x.plâ€ in a shell.
   The file can be php, perl, python, bash, java.
   File suffix is used to determine what program to run."
   (interactive)
@@ -252,6 +252,6 @@
     (setq cmd-str (concat prog-name " " file-name))
     (shell-command cmd-str)))
 
-;;Ìí¼ÓĞĞºÅ
+;;æ·»åŠ è¡Œå·
 (require 'linum)
 (global-linum-mode t)
