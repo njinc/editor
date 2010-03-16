@@ -1,17 +1,17 @@
-"Ï°¹ß²ÎÊıÉèÖÃ
-syn on  "´ò¿ªÓï·¨¼ÓÁÁ
-colors desert "ÉèÖÃÅäÉ«·½°¸
-set guifont=Bitstream_Vera_Sans_Mono:h13:cANSI "ÉèÖÃ×ÖÌå
+"ä¹ æƒ¯å‚æ•°è®¾ç½®
+syn on  "æ‰“å¼€è¯­æ³•åŠ äº®
+colors desert "è®¾ç½®é…è‰²æ–¹æ¡ˆ
+set guifont=Bitstream_Vera_Sans_Mono:h13:cANSI "è®¾ç½®å­—ä½“
 
 set autoindent
-set number	    "´ò¿ªÊı×ÖĞĞ±ê
-set softtabstop=4   "tab½¨Ëõ¼õÉèÎª4¿Õ¸ñ
-set shiftwidth=4    "Óï·¨Ëõ½øÉèÎª4¿Õ¸ñ
-set nobackup    "¹Ø±Õ×Ô¶¯±¸·İ
-"ÉèÖÃF12ÎªpythonÔËĞĞ
+set number	    "æ‰“å¼€æ•°å­—è¡Œæ ‡
+set softtabstop=4   "tabå»ºç¼©å‡è®¾ä¸º4ç©ºæ ¼
+set shiftwidth=4    "è¯­æ³•ç¼©è¿›è®¾ä¸º4ç©ºæ ¼
+set nobackup    "å…³é—­è‡ªåŠ¨å¤‡ä»½
+"è®¾ç½®F12ä¸ºpythonè¿è¡Œ
 map <F12> :!python % 
 
-"ÉèÖÃF5²åÈëÊ±¼ä£¬F6²åÈëÈÕÆÚ
+"è®¾ç½®F5æ’å…¥æ—¶é—´ï¼ŒF6æ’å…¥æ—¥æœŸ
 map <F5> :r !time/T<CR><ESC>kJA
 map <F6> :r !date/T<CR><ESC>kJA
 
@@ -19,16 +19,16 @@ set tabstop=4
 set smarttab
 set cursorline
 set expandtab
-set bsdir=last  "Ä¬ÈÏ´ò¿ªÉÏ´ÎµÄÎÄ¼ş¼Ğ
+set bsdir=last  "é»˜è®¤æ‰“å¼€ä¸Šæ¬¡çš„æ–‡ä»¶å¤¹
 set laststatus=2
 
 "set listchars=tab:>-,trail:-
 
-let g:calendar_diary="D:\\Documents\\diary\\vim"    "ÈÕÖ¾´æ·ÅÎ»ÖÃ
+let g:calendar_diary="D:\\Documents\\diary\\vim"    "æ—¥å¿—å­˜æ”¾ä½ç½®
 
 set completeopt=longest,menu
-filetype plugin on  "ÆôÓÃÎÄ¼şÀàĞÍµÄ²å¼ş
-filetype indent on  "ÆôÓÃ×Ô¶¯Ëõ½ø
+filetype plugin on  "å¯ç”¨æ–‡ä»¶ç±»å‹çš„æ’ä»¶
+filetype indent on  "å¯ç”¨è‡ªåŠ¨ç¼©è¿›
 
 " Encoding settings
 if has("multi_byte")
